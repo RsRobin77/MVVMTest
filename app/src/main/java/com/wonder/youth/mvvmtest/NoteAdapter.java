@@ -43,6 +43,11 @@ private List<Note> notes=new ArrayList<>();
         notifyDataSetChanged();
     }
 
+    public Note getNoteAt(int position){
+        return notes.get(position);
+    }
+
+
     class NoteHolder extends RecyclerView.ViewHolder{
         private TextView textViewTitle,textViewDescription,textViewPriority;
 
