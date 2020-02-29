@@ -28,9 +28,9 @@ private List<Note> notes=new ArrayList<>();
     public void onBindViewHolder(@NonNull NoteHolder holder, int position) {
 
         Note currentNote=notes.get(position);
-        holder.textViewTietle.setText(currentNote.getTitle());
+        holder.textViewTitle.setText(currentNote.getTitle());
         holder.textViewDescription.setText(currentNote.getDescription());
-        holder.textViewPriority.setText(currentNote.getPriority());
+        holder.textViewPriority.setText(currentNote.getPriority()+"");
 
     }
 
@@ -44,11 +44,11 @@ private List<Note> notes=new ArrayList<>();
     }
 
     class NoteHolder extends RecyclerView.ViewHolder{
-        private TextView textViewTietle,textViewDescription,textViewPriority;
+        private TextView textViewTitle,textViewDescription,textViewPriority;
 
         public NoteHolder(@NonNull View itemView) {
             super(itemView);
-            textViewTietle=itemView.findViewById(R.id.text_view_title);
+            textViewTitle=itemView.findViewById(R.id.text_view_title);
             textViewDescription=itemView.findViewById(R.id.textviewdescription);
             textViewPriority=itemView.findViewById(R.id.text_view_priority);
         }
